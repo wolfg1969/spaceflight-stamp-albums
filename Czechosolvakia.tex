@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{background}
+\usepackage{fancyhdr}
+\usepackage[a4paper,top=3cm,bottom=1cm,left=1cm,right=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{stackengine}
+
+\graphicspath{{images/grayscale/}}
+
+% Metadata
+\title{Space Stampes}
+\author{Guo Yong}
+\date{March 2021}
+
+% page head
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{0pt}
+\fancyhead[C]{\fontsize{14}{11}\selectfont \textbf{SPACE STAMPS OF CZECHOSOLVAKIA}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{16pt}% ...at least 15.15604pt
+\setlength{\footskip}{8pt}
+
+% page frame, double box
+\usetikzlibrary{calc}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgColor{black}
+\SetBgContents{
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw [xshift=4mm,line width=2pt]
+            ($ (current page.north west) + (1cm,-1cm) $)
+            rectangle
+            ($ (current page.south east) + (-1cm,1cm) $);
+        \draw [line width=1pt]
+            ($ (current page.north west) + (1.1cm,-1.1cm) $)
+            rectangle
+            ($ (current page.south east) + (-1.1cm,1.1cm) $);
+    \end{tikzpicture}
+}
+
+% stamp
+\newcommand\yeartitle[1]{\fontsize{12}{11}\selectfont \textbf{#1}\\}
+\newcommand\topic[1]{\fontsize{10}{9}\selectfont \textbf{#1}\\}
+\newcommand\stamp[4][]{\stackon{\stackunder{\fbox{\rule{#3}{#4}}}{#2}}{\textbf{#1}}}
+\newcommand\actualstamp[4][]{\stackon{\stackunder{%
+  \fbox{\includegraphics[width=#3]{#4}}}{#2}}{\textbf{#1}}}
+% \newcommand\stamp[5][]{\stackon{\stackunder{\stackunder{\fbox{\rule{#4}{#5}}}{#2}}{#3}}{\textbf{#1}}}
+% \newcommand\actualstamp[5][]{\stackon{\stackunder{\stackunder{%
+%   \fbox{\includegraphics[width=#4]{#5}}}{#2}}{#3}}{\textbf{#1}}}
+
+\begin{document}
+
+\centering
+\yeartitle{1950s}
+\hspace{0,5cm}
+\vspace{0.5cm}
+
+% \raisebox{1.2cm}{\stamp[Sputnik 2 over Earth]{St: CS 838, Mi:CS 1057}{1957-12-20}{3.5cm}{2.9cm}}
+\raisebox{1.2cm}{\actualstamp[Sputnik 2 over Earth]{\stackon{1957-12-20}{St:CS 838, Mi:CS 1057}}{35mm}{Sputnik-2-over-Earth}}
+\hspace{1,1cm}
+\raisebox{1.2cm}{\actualstamp[\stackon{on the Moonport}{Soviet Spaceship}]{\stackon{1959-09-23}{{St:CS 938, Mi:CS 1152}}}{47mm}{Soviet-Spaceship-on-the-Moon}}
+
+\vspace{1cm}
+
+\yeartitle{1960s}
+\hspace{0,5cm}
+\vspace{0.2cm}
+
+\topic{\stackon{1961-03-06}{Space Research}}
+\vspace{0.3cm}
+
+\raisebox{1.2cm}{\actualstamp[Rocket Launching]{St:CS 1031, Mi:CS 1252}{29mm}{Rocket-Launching-cs-1031}}
+\hspace{1,3cm}
+\raisebox{1.2cm}{\actualstamp[Sputnik III]{St:CS 1032, Mi:CS 1253}{46mm}{Sputnik-III}}
+\hspace{1,3cm}
+\raisebox{1.2cm}{\actualstamp[Rocket Launching]{St:CS 1033, Mi:CS 1254}{29mm}{Rocket-Launching-cs-1033}}
+
+\raisebox{1.2cm}{\actualstamp[Lunar module Luna 1]{St:CS 1034, Mi:CS 1255}{46mm}{Lunar-module-Luna-1}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[\stackon{the dark side of the moon}{Luna 3 photographs of}]{St:CS 1035, Mi:CS 1256}{46mm}{Luna-3-photographs-of-the-dark-side-of-the-moon}}
+
+{\actualstamp[Man flying into space]{St:CS 1036, Mi:CS 1257}{46mm}{Man-flying-into-space}}
+
+\newpage
+
+\topic{\stackon{1961-04-13}{The first man in space, Yuri A. Gagarin, Apr. 12, 1961}}
+\vspace{0.5cm}
+
+\raisebox{1.2cm}{\actualstamp{St:CS 1042, Mi:CS 1263}{46mm}{1st-man-in-space-Yuri-A-Gagarin-Apr-12-1961-cs-1042}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp{St:CS 1043, Mi:CS 1264}{46mm}{1st-man-in-space-Yuri-A-Gagarin-Apr-12-1961-cs-1043}}
+
+\topic{\stackon{1961-06-22}{Visit to Prague Y. Gagarin}}
+\vspace{0.5cm}
+
+\raisebox{1.2cm}{\actualstamp{St:CS 1238, Mi:CS 1281}{29mm}{Gagarin-Praha-1961}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp{St:CS 1239, Mi:CS 1282}{29mm}{Gagarin-12IV1961}}
+
+\topic{\stackon{1962-03-25}{Space Research}}
+\vspace{0.5cm}
+
+\raisebox{1.2cm}{\actualstamp[Man Conquering space]{St:CS 1105, Mi:CS 1329}{29mm}{Man-Conquering-space}}
+\hspace{1,2cm}
+\raisebox{1.2cm}{\actualstamp[\stackon{Soviet space rocket}{Launching of}]{St:CS 1106, Mi:CS 1330}{29mm}{Launching-of-Soviet-space-rocket}}
+
+\raisebox{1.2cm}{\actualstamp[Vostok 2]{St:CS 1107, Mi:CS 1331}{46mm}{Vostok-2}}
+
+\raisebox{1.2cm}{\actualstamp[Multi-stage automatic rocket]{St:CS 1108, Mi:CS 1332}{46mm}{Multi-stage-automatic-rocket}}
+\hspace{0,3cm}
+\raisebox{1.2cm}{\actualstamp[Automatic station on moon]{St:CS 1109, Mi:CS 1333}{29mm}{Automatic-station-on-moon}}
+\hspace{0,3cm}
+\raisebox{1.2cm}{\actualstamp[Television satellite]{St:CS 1110, Mi:CS 1334}{47mm}{Television-satellite}}
+
+\topic{\stackon{1963-04-25}{Space Research}}
+\vspace{0.5cm}
+
+\newpage
+
+\raisebox{1.2cm}{\stamp[Images]{graphicx}{1.8cm}{1.5cm}}
+\hspace{0,5cm}
+\stackon[1cm]{\stamp[Equations]{amsmath}{1.8cm}{1.5cm}}{\stamp[Graphics]{tikz}{1.5cm}{1.8cm}}
+\hspace{0,5cm}
+\raisebox{1.2cm}{\stamp[\stackon{\& Captions}{Figures}]{\stackon{V1.0}{boxhandler}}{1.8cm}{1.5cm}}
+
+\stamp[Tables]{tabularx}{1.8cm}{1.5cm}
+\hspace{1.5cm}
+\stamp[Stacking]{stackengine}{1.8cm}{1.5cm}
+
+% \newpage
+
+\end{document}
