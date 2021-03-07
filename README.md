@@ -1,4 +1,4 @@
-# space-stamp-album
+# spaceflight-stamps
 
 Thanks to: 
 * https://tex.stackexchange.com/questions/130658/printing-stamp-albums
