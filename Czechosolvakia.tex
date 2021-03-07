@@ -12,7 +12,7 @@
 \author{Guo Yong}
 \date{March 2021}
 
-% page head
+% Page head and foot
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand\headrulewidth{0pt}
@@ -20,9 +20,9 @@
 \fancyhead[C]{\fontsize{14}{11}\selectfont \textbf{SPACE STAMPS OF CZECHOSOLVAKIA}}
 \fancyfoot[C]{\thepage}
 \setlength{\headheight}{16pt}% ...at least 15.15604pt
-\setlength{\footskip}{8pt}
+\setlength{\footskip}{12pt}% ...at least 12pt
 
-% page frame, double box
+% Page frame, double box
 \usetikzlibrary{calc}
 \SetBgScale{1}
 \SetBgAngle{0}
@@ -40,15 +40,12 @@
     \end{tikzpicture}
 }
 
-% stamp
+% Stamp
 \newcommand\yeartitle[1]{\fontsize{12}{11}\selectfont \textbf{#1}\\}
 \newcommand\topic[1]{\fontsize{10}{9}\selectfont \textbf{#1}\\}
 \newcommand\stamp[4][]{\stackon{\stackunder{\fbox{\rule{#3}{#4}}}{#2}}{\textbf{#1}}}
 \newcommand\actualstamp[4][]{\stackon{\stackunder{%
   \fbox{\includegraphics[width=#3]{#4}}}{#2}}{\textbf{#1}}}
-% \newcommand\stamp[5][]{\stackon{\stackunder{\stackunder{\fbox{\rule{#4}{#5}}}{#2}}{#3}}{\textbf{#1}}}
-% \newcommand\actualstamp[5][]{\stackon{\stackunder{\stackunder{%
-%   \fbox{\includegraphics[width=#4]{#5}}}{#2}}{#3}}{\textbf{#1}}}
 
 \begin{document}
 
@@ -57,7 +54,6 @@
 \hspace{0,5cm}
 \vspace{0.5cm}
 
-% \raisebox{1.2cm}{\stamp[Sputnik 2 over Earth]{St: CS 838, Mi:CS 1057}{1957-12-20}{3.5cm}{2.9cm}}
 \raisebox{1.2cm}{\actualstamp[Sputnik 2 over Earth]{\stackon{1957-12-20}{St:CS 838, Mi:CS 1057}}{35mm}{Sputnik-2-over-Earth}}
 \hspace{1,1cm}
 \raisebox{1.2cm}{\actualstamp[\stackon{on the Moonport}{Soviet Spaceship}]{\stackon{1959-09-23}{{St:CS 938, Mi:CS 1152}}}{47mm}{Soviet-Spaceship-on-the-Moon}}
@@ -86,21 +82,21 @@
 \newpage
 
 \topic{\stackon{1961-04-13}{The first man in space, Yuri A. Gagarin, Apr. 12, 1961}}
-\vspace{0.5cm}
+\vspace{0.3cm}
 
 \raisebox{1.2cm}{\actualstamp{St:CS 1042, Mi:CS 1263}{46mm}{1st-man-in-space-Yuri-A-Gagarin-Apr-12-1961-cs-1042}}
 \hspace{1,5cm}
 \raisebox{1.2cm}{\actualstamp{St:CS 1043, Mi:CS 1264}{46mm}{1st-man-in-space-Yuri-A-Gagarin-Apr-12-1961-cs-1043}}
 
 \topic{\stackon{1961-06-22}{Visit to Prague Y. Gagarin}}
-\vspace{0.5cm}
+\vspace{0.3cm}
 
-\raisebox{1.2cm}{\actualstamp{St:CS 1238, Mi:CS 1281}{29mm}{Gagarin-Praha-1961}}
+\raisebox{1.2cm}{\actualstamp[Prague hails Gagarin]{St:CS 1238, Mi:CS 1281}{29mm}{Gagarin-Praha-1961}}
 \hspace{1,5cm}
-\raisebox{1.2cm}{\actualstamp{St:CS 1239, Mi:CS 1282}{29mm}{Gagarin-12IV1961}}
+\raisebox{1.2cm}{\actualstamp[Gagarin, rocket \& dove]{St:CS 1239, Mi:CS 1282}{29mm}{Gagarin-12IV1961}}
 
 \topic{\stackon{1962-03-25}{Space Research}}
-\vspace{0.5cm}
+\vspace{0.3cm}
 
 \raisebox{1.2cm}{\actualstamp[Man Conquering space]{St:CS 1105, Mi:CS 1329}{29mm}{Man-Conquering-space}}
 \hspace{1,2cm}
@@ -114,21 +110,103 @@
 \hspace{0,3cm}
 \raisebox{1.2cm}{\actualstamp[Television satellite]{St:CS 1110, Mi:CS 1334}{47mm}{Television-satellite}}
 
+\vspace{1cm}
 \topic{\stackon{1963-04-25}{Space Research}}
 \vspace{0.5cm}
 
+\raisebox{1.2cm}{
+    \stackon[1cm]
+        {\actualstamp[Atomic rocket \& Jupiter]{St:CS 1173, Mi:CS 1400}{47mm}{Space-Research-CS-1173}}
+        {\stackon[1cm]
+            {\actualstamp[Spacecraft to \& from Moon]{St:CS 1171, Mi:CS 1398}{47mm}{Space-Research-CS-1171}}
+            {\actualstamp[Rocket to the Sun]{St:CS 1169, Mi:CS 1396}{47mm}{Space-Research-CS-1169}}
+        }
+}
+\hspace{2,2cm}
+\raisebox{1.2cm}{
+    \stackon[1cm]
+        {\actualstamp[Rocket returning from Saturn]{St:CS 1174, Mi:CS 1401}{47mm}{Space-Research-CS-1174}}
+        {\stackon[1cm]
+            {\actualstamp[Interplancetary station \& Mars 1]{St:CS 1172, Mi:CS 1399}{47mm}{Space-Research-CS-1172}}
+            {\actualstamp[Rockets \& Sputniks leaving Earth]{St:CS 1170, Mi:CS 1397}{47mm}{Space-Research-CS-1170}}
+        }
+}
+
 \newpage
 
-\raisebox{1.2cm}{\stamp[Images]{graphicx}{1.8cm}{1.5cm}}
-\hspace{0,5cm}
-\stackon[1cm]{\stamp[Equations]{amsmath}{1.8cm}{1.5cm}}{\stamp[Graphics]{tikz}{1.5cm}{1.8cm}}
-\hspace{0,5cm}
-\raisebox{1.2cm}{\stamp[\stackon{\& Captions}{Figures}]{\stackon{V1.0}{boxhandler}}{1.8cm}{1.5cm}}
+\raisebox{1.2cm}{\actualstamp[1st Space Research Exhib., Prague, Apr. 1963]{St:CS 1175, Mi:CS BL19}{87mm}{Space-Research-CS-1175}}
 
-\stamp[Tables]{tabularx}{1.8cm}{1.5cm}
-\hspace{1.5cm}
-\stamp[Stacking]{stackengine}{1.8cm}{1.5cm}
+\vspace{0.6cm}
+\topic{\stackon{1963-06-26}{Group flight of the spaceships ``Wostok 5'' and ``Wostok 6''}}
+\vspace{0.6cm}
 
-% \newpage
+\raisebox{1.2cm}{\actualstamp[Vostok 5 \& Lt. Col. Valeri Bykovski]{St:CS C57, Mi:CS 1413}{47mm}{Manned-Space-Flights-CS-C57}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[\stackon{(fist woman astronaut)}{Vostok 6 \& Lt. Valentina Tereshkova}]{St:CS C58, Mi:CS 1414}{47mm}{Manned-Space-Flights-CS-C58}}
+
+\yeartitle{1964}
+\hspace{0,5cm}
+\vspace{0.2cm}
+
+\topic{\stackon{1964-04-27}{World's first 10 astronauts}}
+\vspace{0.3cm}
+
+\raisebox{1.2cm}{\actualstamp[J.Gagarin, loď Kosmos]{St:CS 1233, Mi:CS 1463}{56mm}{JGagarin-loď-Kosmos}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[G.S.Titov, start rakety Vostok]{St:CS 1234, Mi:CS 1464}{56mm}{GSTitov-start-rakety-Vostok}}
+
+\raisebox{1.2cm}{\actualstamp[J.H.Glenn, loď Mercury]{St:CS 1235, Mi:CS 1465}{56mm}{JHGlenn-loď-Mercury}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[M.S.Carpenter, přistání Mercury]{St:CS 1236, Mi:CS 1466}{35mm}{MSCarpenter-přistání-Mercury}}
+
+\raisebox{1.2cm}{\actualstamp[P.R.Popovič, A.G.Nikolajev]{St:CS 1237, Mi:CS 1467}{56mm}{PRPopovič-AGNikolajev}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[W.M.Schirra, raketa Mercury]{St:CS 1238, Mi:CS 1468}{35mm}{WMSchirra-raketa-Mercury}}
+
+\raisebox{1.2cm}{\actualstamp[L.G.Cooper v kabině lodi Mercury]{St:CS 1239, Mi:CS 1469}{35mm}{LGCooper-v-kabině-lodi-Mercury}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[V.V.Těreškovová, F.V.Bykovskij]{St:CS 1240, Mi:CS 1470}{35mm}{VVTěreškovová-FVBykovskij}}
+
+\newpage
+\topic{\stackon{1964-12-11}{Three astronauts}}
+\vspace{0.3cm}
+\raisebox{1.2cm}
+{\actualstamp
+    [Space Ship Voskhod I, Astronauts]
+    {\stackon{Russian 3-man space flight of Vladimir M. Komarov, Boris B. Yegorov and Konstantin Feoktistov, Oct. 12-13.}{St:CS 1264, Mi:CS BL21}}
+    {95mm}
+    {Space-Ship-Voskhod-I-Astronauts}
+}
+
+\yeartitle{1965}
+\hspace{0,5cm}
+\vspace{0.2cm}
+
+\topic{\stackon{1965-03-15}{Research of space}}
+\vspace{0.3cm}
+
+\raisebox{1.2cm}{\actualstamp[Sun's Corona]{St:CS 1289, Mi:CS 1515}{46mm}{Sun´s-Corona}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[Sun]{St:CS 1290, Mi:CS 1516}{46mm}{Sun}}
+
+\raisebox{1.2cm}{\actualstamp[Exploration of the Moon]{St:CS 1291, Mi:CS 1517}{46mm}{Exploration-of-the-Moon}}
+\hspace{0,5cm}
+\raisebox{1.2cm}{\actualstamp[Twin space craft]{St:CS 1292, Mi:CS 1518}{29mm}{Twin-space-craft}}
+\hspace{0,5cm}
+\raisebox{1.2cm}{\actualstamp[Space station]{St:CS 1293, Mi:CS 1519}{46mm}{Space-station}}
+
+\raisebox{1.2cm}{\actualstamp[Exploration of Mars]{St:CS 1294, Mi:CS 1520}{29mm}{Exploration-of-Mars}}
+\hspace{1,5cm}
+\raisebox{1.2cm}{\actualstamp[USSR and US Meteorological cooperation]{St:CS 1295, Mi:CS 1521}{46mm}{USSR-and-US-Meteorological-cooperation}}
+
+\vspace{2cm}
+\topic{\stackon{1965-04-17}{To honor American \& Soviet astronauts}}
+\vspace{1cm}
+
+\raisebox{1.2cm}{
+    \stackon[1cm]
+        {\actualstamp[Alexei Leonov floating in space]{St:CS 1305a, Mi:CS 1529/1531}{108mm}{Alexei-Leonov-floating-in-space}}
+        {\actualstamp[Gemini, Astronauts Virgil Grissom and John Young]{St:CS 1306a, Mi:CS 1530/1532}{108mm}{Gemini-Astronauts-Virgil-Grissom-and-John-Young}}
+}
 
 \end{document}
