@@ -4,6 +4,7 @@
 \usepackage[a4paper,top=3cm,bottom=1cm,left=1cm,right=1cm]{geometry}
 \usepackage{graphicx}
 \usepackage{stackengine}
+\usepackage{stamp}
 
 \graphicspath{{images/grayscale/}}
 
@@ -39,13 +40,6 @@
             ($ (current page.south east) + (-1.1cm,1.1cm) $);
     \end{tikzpicture}
 }
-
-% Stamp
-\newcommand\yeartitle[1]{\fontsize{12}{11}\selectfont \textbf{#1}\\}
-\newcommand\topic[1]{\fontsize{10}{9}\selectfont \textbf{#1}\\}
-\newcommand\stamp[4][]{\stackon{\stackunder{\fbox{\rule{#3}{#4}}}{#2}}{\textbf{#1}}}
-\newcommand\actualstamp[4][]{\stackon{\stackunder{%
-  \fbox{\includegraphics[width=#3]{#4}}}{#2}}{\textbf{#1}}}
 
 \begin{document}
 
