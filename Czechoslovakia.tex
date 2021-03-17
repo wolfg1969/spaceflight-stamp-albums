@@ -24,21 +24,15 @@
 \setlength{\footskip}{12pt}% ...at least 12pt
 
 % Page frame, double box
+\backgroundsetup{contents={}}
 \usetikzlibrary{calc}
-\SetBgScale{1}
-\SetBgAngle{0}
-\SetBgColor{black}
-\SetBgContents{
-    \begin{tikzpicture}[overlay,remember picture]
-        \draw [xshift=4mm,line width=2pt]
-            ($ (current page.north west) + (1cm,-1cm) $)
-            rectangle
-            ($ (current page.south east) + (-1cm,1cm) $);
-        \draw [line width=1pt]
-            ($ (current page.north west) + (1.1cm,-1.1cm) $)
-            rectangle
-            ($ (current page.south east) + (-1.1cm,1.1cm) $);
-    \end{tikzpicture}
+
+\usepackage{eso-pic}
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[xshift=4mm,line width=2pt] ($(current page.north west)+(1cm,-1cm)$) rectangle ($(current page.south east)+(-1cm,1cm)$);
+  \draw[line width=1pt] ($(current page.north west)+(1.1cm,-1.1cm)$) rectangle ($(current page.south east)+(-1.1cm,1.1cm)$);
+\end{tikzpicture}%
 }
 
 \begin{document}
